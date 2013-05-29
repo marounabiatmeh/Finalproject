@@ -59,7 +59,7 @@
 				
 				if (auth==password)
 				   {
-				   
+				   window.alert("success");
 				   var url1="http://192.168.1.104/project/setNumAsActive.php?num="+id;
 					var ref = window.open(url1, '_blank', 'location=yes');
 					ref.close();
@@ -69,17 +69,14 @@
 
 					
 					
-					window.alert("success");
+					
 					}
 				else
 					window.alert("failure");
 				
 				}
 		
-		 /*function onDeviceReady() {
-		 var url="http://192.168.1.104/project/setNumAsActive.php?num="+id;
-         var ref = window.open(url, '_blank', 'location=yes');
-         }*/
+		 
 
 		
 	</script>			
