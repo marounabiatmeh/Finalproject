@@ -1,0 +1,86 @@
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+
+		<title>Client Console</title>
+	</head>
+
+	<body>
+
+		<form>
+			<input name="state" type="number" id="myButton" maxlength="11" size="8">
+			<br>
+			<input name="state" type="text" id="myButton2" maxlength="11" size="8">
+			<br>
+			<input type="submit" value="Submit" id="submitB" onclick="authentication();">
+		</form>
+	
+	</body>
+
+	<script  type="text/javascript" language="javascript">
+	
+			
+				function authentication() 
+				{
+					var id = document.getElementById('myButton').value;
+					var password = document.getElementById('myButton2').value;
+			
+					var var3;
+					var3 = id*123;
+					var3 = var3+(var3/1.536);
+					var3 = parseInt(var3);
+					var var4;
+					var var5; 
+			
+				if (id<20)
+					{ var4="A";
+					  var5="XY";
+					}
+	
+				if (id>20 && id<60)
+					{ var4="B";
+					  var5="CY";
+					}
+					
+				if (id>60 && id<100)
+					{ var4="H";
+					  var5="KL";
+					}
+	
+				if (id>100)
+					{ var4="G";
+					  var5="FT";
+					}
+					
+				auth=var4+var3+var5;
+				
+				if (auth==password)
+				   {
+				   
+				   var url1="http://192.168.1.104/project/setNumAsActive.php?num="+id;
+					var ref = window.open(url1, '_blank', 'location=yes');
+					ref.close();
+					
+
+
+
+					
+					
+					window.alert("success");
+					}
+				else
+					window.alert("failure");
+				
+				}
+		
+		 /*function onDeviceReady() {
+		 var url="http://192.168.1.104/project/setNumAsActive.php?num="+id;
+         var ref = window.open(url, '_blank', 'location=yes');
+         }*/
+
+		
+	</script>			
+</html>

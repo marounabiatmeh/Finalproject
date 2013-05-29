@@ -1,0 +1,32 @@
+body 
+{
+background-image:url("images/1.jpg");
+background-repeat:no-repeat;
+background-size:100% 100%;
+} 
+
+#myButton 
+{
+margin-left:42%;
+margin-top :55%;
+
+}
+
+#myButton2 
+{
+margin-left:42%;
+margin-top:10px;
+}
+
+#submitB
+{
+margin-left:45%;
+margin-top:10px;
+}
+
+html, body{
+ max-width: 100%;
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
